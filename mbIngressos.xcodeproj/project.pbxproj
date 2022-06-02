@@ -13,6 +13,16 @@
 		42875E28284923F100B63305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42875E26284923F100B63305 /* Main.storyboard */; };
 		42875E2A284923F300B63305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42875E29284923F300B63305 /* Assets.xcassets */; };
 		42875E2D284923F300B63305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42875E2B284923F300B63305 /* LaunchScreen.storyboard */; };
+		42875E362849243300B63305 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E352849243300B63305 /* HomeViewController.swift */; };
+		42875E382849244900B63305 /* EventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E372849244900B63305 /* EventoTableViewCell.swift */; };
+		42875E3A2849245700B63305 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E392849245700B63305 /* InfoViewController.swift */; };
+		42875E3C2849246B00B63305 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E3B2849246B00B63305 /* FavoritosViewController.swift */; };
+		42875E3E2849247600B63305 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E3D2849247600B63305 /* LoginViewController.swift */; };
+		42875E402849248400B63305 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E3F2849248400B63305 /* CadastroViewController.swift */; };
+		42875E42284924B600B63305 /* FavoritosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E41284924B600B63305 /* FavoritosTableViewCell.swift */; };
+		42875E452849254500B63305 /* EventoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E442849254500B63305 /* EventoViewModel.swift */; };
+		42875E482849256100B63305 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E472849256100B63305 /* Service.swift */; };
+		42875E4B2849257400B63305 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E4A2849257400B63305 /* Evento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		42875E29284923F300B63305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42875E2C284923F300B63305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42875E2E284923F300B63305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42875E352849243300B63305 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		42875E372849244900B63305 /* EventoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoTableViewCell.swift; sourceTree = "<group>"; };
+		42875E392849245700B63305 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		42875E3B2849246B00B63305 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		42875E3D2849247600B63305 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		42875E3F2849248400B63305 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		42875E41284924B600B63305 /* FavoritosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewCell.swift; sourceTree = "<group>"; };
+		42875E442849254500B63305 /* EventoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventoViewModel.swift; sourceTree = "<group>"; };
+		42875E472849256100B63305 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		42875E4A2849257400B63305 /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,10 @@
 		42875E1F284923F100B63305 /* mbIngressos */ = {
 			isa = PBXGroup;
 			children = (
+				42875E492849256D00B63305 /* Model */,
+				42875E462849255300B63305 /* Service */,
+				42875E432849252F00B63305 /* ViewModel */,
+				42875E342849241700B63305 /* View */,
 				42875E20284923F100B63305 /* AppDelegate.swift */,
 				42875E22284923F100B63305 /* SceneDelegate.swift */,
 				42875E24284923F100B63305 /* ViewController.swift */,
@@ -65,6 +89,44 @@
 				42875E2E284923F300B63305 /* Info.plist */,
 			);
 			path = mbIngressos;
+			sourceTree = "<group>";
+		};
+		42875E342849241700B63305 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42875E352849243300B63305 /* HomeViewController.swift */,
+				42875E372849244900B63305 /* EventoTableViewCell.swift */,
+				42875E392849245700B63305 /* InfoViewController.swift */,
+				42875E3B2849246B00B63305 /* FavoritosViewController.swift */,
+				42875E3D2849247600B63305 /* LoginViewController.swift */,
+				42875E3F2849248400B63305 /* CadastroViewController.swift */,
+				42875E41284924B600B63305 /* FavoritosTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42875E432849252F00B63305 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42875E442849254500B63305 /* EventoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		42875E462849255300B63305 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				42875E472849256100B63305 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		42875E492849256D00B63305 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42875E4A2849257400B63305 /* Evento.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +201,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				42875E25284923F100B63305 /* ViewController.swift in Sources */,
+				42875E402849248400B63305 /* CadastroViewController.swift in Sources */,
+				42875E3C2849246B00B63305 /* FavoritosViewController.swift in Sources */,
+				42875E4B2849257400B63305 /* Evento.swift in Sources */,
+				42875E42284924B600B63305 /* FavoritosTableViewCell.swift in Sources */,
 				42875E21284923F100B63305 /* AppDelegate.swift in Sources */,
+				42875E482849256100B63305 /* Service.swift in Sources */,
+				42875E382849244900B63305 /* EventoTableViewCell.swift in Sources */,
+				42875E3E2849247600B63305 /* LoginViewController.swift in Sources */,
 				42875E23284923F100B63305 /* SceneDelegate.swift in Sources */,
+				42875E452849254500B63305 /* EventoViewModel.swift in Sources */,
+				42875E3A2849245700B63305 /* InfoViewController.swift in Sources */,
+				42875E362849243300B63305 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
