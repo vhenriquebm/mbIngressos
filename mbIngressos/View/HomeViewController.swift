@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
+    
+    let authentication = Auth.auth()
     
     @IBAction func entrarButton(_ sender: Any) {
         
@@ -21,9 +24,28 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureUI()
+        
+        authentication.addStateDidChangeListener { auth, user in
+            
+            if user != nil {
+                
+            print ("usuario logado")
+                self.performSegue(withIdentifier: "usuarioLogado", sender: self)
+                
+            } else {
+                
+                print ( "Erro ao logar")
+            }
+            
+            
+        }
+       
     }
     
+    
+ 
     
     func configureUI () {
         title = "Home"

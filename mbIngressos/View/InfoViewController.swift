@@ -9,6 +9,8 @@ import Foundation
 
 import Foundation
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 
 protocol AdicionarFavoritosDelegate {
@@ -18,6 +20,8 @@ protocol AdicionarFavoritosDelegate {
 
 class InfoViewController: UIViewController {
     
+    let authentication = Auth.auth()
+    let fireStore = Firestore.firestore()
    
     @IBAction func comprarIngressoButton(_ sender: Any) {
         
@@ -46,6 +50,26 @@ class InfoViewController: UIViewController {
         delegate?.adicionarAosFavorito(evento: eventoInformacoes)
         
         performSegue(withIdentifier: "adicionarAosFavoritos", sender: self)
+        
+        let usuarioID = authentication.currentUser?.uid
+        
+        if let idUsuario = usuarioID {
+            
+            self.fireStore.collection("favoritos").document(idUsuario).collection("favoritos_usuario").addDocument(data: [
+                
+             "id": idUsuario,
+             "nomeDoEvento": eventoInformacoes?.nome ?? "",
+             "dataDoEvento":eventoInformacoes?.data ?? "",
+             "descricaoDoEvento": eventoInformacoes?.descricao ?? "",
+             "imagemDoEvento": eventoInformacoes?.imagem ?? ""
+             
+            ])
+        }
+            
+           
+            
+           
+        
         
    
     }
