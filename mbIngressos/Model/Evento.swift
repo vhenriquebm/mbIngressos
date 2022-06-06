@@ -6,14 +6,12 @@
 //
 
 import Foundation
-import UIKit
 
 struct Evento {
-    
     let nome: String
     let tipo: String
     let descricao: String
     let data: String
-    let imagem: UIImage
-    
+    let imagem: String
+    let valorIngresso: String    
 }

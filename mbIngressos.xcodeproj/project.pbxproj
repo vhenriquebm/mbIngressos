@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24EC77BFD7C65C719612D296 /* Pods_mbIngressos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4281A4B254594609FF128C /* Pods_mbIngressos.framework */; };
 		42875E21284923F100B63305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E20284923F100B63305 /* AppDelegate.swift */; };
 		42875E23284923F100B63305 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E22284923F100B63305 /* SceneDelegate.swift */; };
 		42875E25284923F100B63305 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E24284923F100B63305 /* ViewController.swift */; };
@@ -25,7 +24,11 @@
 		42875E482849256100B63305 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E472849256100B63305 /* Service.swift */; };
 		42875E4B2849257400B63305 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42875E4A2849257400B63305 /* Evento.swift */; };
 		42875E4D2849284D00B63305 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42875E4C2849284D00B63305 /* GoogleService-Info.plist */; };
+		42C4A198284A94DF00A031B9 /* ComprasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C4A197284A94DF00A031B9 /* ComprasViewController.swift */; };
+		42C4A19A284A95D600A031B9 /* ComprasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C4A199284A95D500A031B9 /* ComprasTableViewCell.swift */; };
+		42C4A19C284A98F300A031B9 /* EfetuarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C4A19B284A98F300A031B9 /* EfetuarCompraViewController.swift */; };
 		42F02734284955950080BCA7 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F02733284955940080BCA7 /* PerfilViewController.swift */; };
+		DB833C4409FDF1F6C0922663 /* Pods_mbIngressos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99D240E90781CCD4A40E23E /* Pods_mbIngressos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +51,13 @@
 		42875E472849256100B63305 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		42875E4A2849257400B63305 /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		42875E4C2849284D00B63305 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42C4A197284A94DF00A031B9 /* ComprasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasViewController.swift; sourceTree = "<group>"; };
+		42C4A199284A95D500A031B9 /* ComprasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTableViewCell.swift; sourceTree = "<group>"; };
+		42C4A19B284A98F300A031B9 /* EfetuarCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EfetuarCompraViewController.swift; sourceTree = "<group>"; };
 		42F02733284955940080BCA7 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
-		CC1B60C5C53265AA43F39CDC /* Pods-mbIngressos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbIngressos.release.xcconfig"; path = "Target Support Files/Pods-mbIngressos/Pods-mbIngressos.release.xcconfig"; sourceTree = "<group>"; };
-		DB679891910C5CCF546BA759 /* Pods-mbIngressos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbIngressos.debug.xcconfig"; path = "Target Support Files/Pods-mbIngressos/Pods-mbIngressos.debug.xcconfig"; sourceTree = "<group>"; };
-		DE4281A4B254594609FF128C /* Pods_mbIngressos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mbIngressos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03C88D48FAE920804B3E6D5 /* Pods-mbIngressos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbIngressos.release.xcconfig"; path = "Target Support Files/Pods-mbIngressos/Pods-mbIngressos.release.xcconfig"; sourceTree = "<group>"; };
+		B99D240E90781CCD4A40E23E /* Pods_mbIngressos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mbIngressos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB53162373E2984D6724047 /* Pods-mbIngressos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbIngressos.debug.xcconfig"; path = "Target Support Files/Pods-mbIngressos/Pods-mbIngressos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +65,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24EC77BFD7C65C719612D296 /* Pods_mbIngressos.framework in Frameworks */,
+				DB833C4409FDF1F6C0922663 /* Pods_mbIngressos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3989DE7D49B3AA091D996FE1 /* Frameworks */ = {
+		2DEB8B84A9AEA3D9B7F6E8C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE4281A4B254594609FF128C /* Pods_mbIngressos.framework */,
+				B99D240E90781CCD4A40E23E /* Pods_mbIngressos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,7 +86,7 @@
 				42875E1F284923F100B63305 /* mbIngressos */,
 				42875E1E284923F100B63305 /* Products */,
 				CEB565D0463E4E206B696324 /* Pods */,
-				3989DE7D49B3AA091D996FE1 /* Frameworks */,
+				2DEB8B84A9AEA3D9B7F6E8C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,11 +123,14 @@
 				42875E352849243300B63305 /* HomeViewController.swift */,
 				42875E372849244900B63305 /* EventoTableViewCell.swift */,
 				42875E392849245700B63305 /* InfoViewController.swift */,
+				42C4A19B284A98F300A031B9 /* EfetuarCompraViewController.swift */,
 				42875E3B2849246B00B63305 /* FavoritosViewController.swift */,
 				42875E3D2849247600B63305 /* LoginViewController.swift */,
 				42875E3F2849248400B63305 /* CadastroViewController.swift */,
 				42875E41284924B600B63305 /* FavoritosTableViewCell.swift */,
 				42F02733284955940080BCA7 /* PerfilViewController.swift */,
+				42C4A197284A94DF00A031B9 /* ComprasViewController.swift */,
+				42C4A199284A95D500A031B9 /* ComprasTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,8 +162,8 @@
 		CEB565D0463E4E206B696324 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DB679891910C5CCF546BA759 /* Pods-mbIngressos.debug.xcconfig */,
-				CC1B60C5C53265AA43F39CDC /* Pods-mbIngressos.release.xcconfig */,
+				ECB53162373E2984D6724047 /* Pods-mbIngressos.debug.xcconfig */,
+				B03C88D48FAE920804B3E6D5 /* Pods-mbIngressos.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -166,11 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42875E31284923F300B63305 /* Build configuration list for PBXNativeTarget "mbIngressos" */;
 			buildPhases = (
-				513734E18783243EE2C7CA4B /* [CP] Check Pods Manifest.lock */,
+				BCBA4D7BC532AD26F98C3881 /* [CP] Check Pods Manifest.lock */,
 				42875E19284923F100B63305 /* Sources */,
 				42875E1A284923F100B63305 /* Frameworks */,
 				42875E1B284923F100B63305 /* Resources */,
-				532827CBD64C51F62004BB95 /* [CP] Embed Pods Frameworks */,
+				ED3A06187804E683BEDE6600 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,7 +238,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		513734E18783243EE2C7CA4B /* [CP] Check Pods Manifest.lock */ = {
+		BCBA4D7BC532AD26F98C3881 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,7 +260,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		532827CBD64C51F62004BB95 /* [CP] Embed Pods Frameworks */ = {
+		ED3A06187804E683BEDE6600 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,9 +293,12 @@
 				42875E482849256100B63305 /* Service.swift in Sources */,
 				42875E382849244900B63305 /* EventoTableViewCell.swift in Sources */,
 				42875E3E2849247600B63305 /* LoginViewController.swift in Sources */,
+				42C4A198284A94DF00A031B9 /* ComprasViewController.swift in Sources */,
 				42875E23284923F100B63305 /* SceneDelegate.swift in Sources */,
+				42C4A19C284A98F300A031B9 /* EfetuarCompraViewController.swift in Sources */,
 				42875E452849254500B63305 /* EventoViewModel.swift in Sources */,
 				42875E3A2849245700B63305 /* InfoViewController.swift in Sources */,
+				42C4A19A284A95D600A031B9 /* ComprasTableViewCell.swift in Sources */,
 				42F02734284955950080BCA7 /* PerfilViewController.swift in Sources */,
 				42875E362849243300B63305 /* HomeViewController.swift in Sources */,
 			);
@@ -430,7 +442,7 @@
 		};
 		42875E32284923F300B63305 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB679891910C5CCF546BA759 /* Pods-mbIngressos.debug.xcconfig */;
+			baseConfigurationReference = ECB53162373E2984D6724047 /* Pods-mbIngressos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,7 +471,7 @@
 		};
 		42875E33284923F300B63305 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC1B60C5C53265AA43F39CDC /* Pods-mbIngressos.release.xcconfig */;
+			baseConfigurationReference = B03C88D48FAE920804B3E6D5 /* Pods-mbIngressos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

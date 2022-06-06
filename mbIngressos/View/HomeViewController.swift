@@ -6,46 +6,32 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
-    let authentication = Auth.auth()
+    let eventoViewModel = EventoViewModel ()
     
     @IBAction func entrarButton(_ sender: Any) {
         
         performSegue(withIdentifier: "telaDeLogin", sender: self)
     }
     
-    
     @IBOutlet weak var tabelaDeEventos: UITableView!
-    
-    let eventoViewModel = EventoViewModel ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureUI()
+        eventoViewModel.consultarStatusLoginDoUsuario()
         
-        authentication.addStateDidChangeListener { auth, user in
-            
-            if user != nil {
-                
-            print ("usuario logado")
-                self.performSegue(withIdentifier: "usuarioLogado", sender: self)
-                
-            } else {
-                
-                print ( "Erro ao logar")
-            }
-            
-            
-        }
-       
     }
     
     
- 
+    @IBAction func botaoDeSair(_ sender: Any) {
+        
+        eventoViewModel.logOutDoUsuario()
+
+    }
+    
     
     func configureUI () {
         title = "Home"
@@ -60,7 +46,6 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "infoView", sender: self)
-        
         
     }
     
@@ -96,8 +81,10 @@ extension HomeViewController: UITableViewDataSource {
             let indice = indexPath.row
             let lista = eventoViewModel.retornarEventos()
             
-            cell.imagemDoEvento.image = lista[indice].imagem
+            cell.imagemDoEvento.image = UIImage(named: lista[indice].imagem)
+            
             cell.nomeDoEvento.text = lista[indice].nome
+            
             cell.dataDoEvento.text = lista[indice].data
             
             return cell
@@ -109,7 +96,10 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 200
+        return 240
     }
     
 }
+
+
+

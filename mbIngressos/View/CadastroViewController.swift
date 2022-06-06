@@ -19,14 +19,14 @@ class CadastroViewController: UIViewController {
     
     @IBOutlet weak var senhaDoUsuario: UITextField!
     
-    let authentication = Auth.auth()
-    let fireStore = Firestore.firestore()
+    let authentication = Auth.auth() //errado
+    let fireStore = Firestore.firestore()  // errado
     
     
     
     @IBAction func cadastrarUsuario(_ sender: Any) {
         
-        guard let email = emailDoUsuario.text, let senha = senhaDoUsuario.text, let nome = nomeDoUsuario.text, let cpf = cpfDoUsuario.text else {return}
+        guard let email = emailDoUsuario.text, let senha = senhaDoUsuario.text, let nome = nomeDoUsuario.text, let cpf = cpfDoUsuario.text else {return} 
         
         
         authentication.createUser(withEmail: email, password: senha) { resultado, erro in

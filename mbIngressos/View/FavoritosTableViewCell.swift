@@ -9,6 +9,7 @@ import UIKit
 
 class FavoritosTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var descricaoDoEvento: UILabel!
     
     @IBOutlet weak var imagemFavoritos: UIImageView!
     

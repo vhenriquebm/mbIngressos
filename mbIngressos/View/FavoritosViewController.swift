@@ -27,6 +27,7 @@ class FavoritosViewController: UIViewController {
     func qualquer () {
 
         guard let evento = novoEventoFavorito else {return}
+        
         listaDeFavoritos.append(evento)
     }
     
@@ -120,7 +121,7 @@ extension FavoritosViewController: UITableViewDataSource {
             
             cell.nomeDoEvento.text = nome
             cell.dataDoEvento.text = data
-            cell.dataDoEvento.text = descricao
+            cell.descricaoDoEvento.text = descricao
             //cell.dataDoEvento.text = listaDeFavoritos[indice].data
            // cell.imagemFavoritos.image = listaDeFavoritos[indice].imagem
 
@@ -144,14 +145,4 @@ extension FavoritosViewController: UITableViewDataSource {
     
 }
 
-extension FavoritosViewController: AdicionarFavoritosDelegate {
-    
-    func adicionarAosFavorito(evento: Evento?) {
-        
-        listaDeFavoritos.append(evento!)
-        
-        tabelaDeFavoritos.reloadData()
-        
-    }
-    
-}
+
