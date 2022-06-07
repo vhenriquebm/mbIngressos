@@ -23,14 +23,8 @@ class Service {
         Evento(nome: "Eu programo Tu programas!", tipo: "Empresa", descricao: "A MB University irá realizar um curso de 60 horas, com a intenção de ensinar os fundamentos básicos da Internet para pessoas com dificuldades de acesso a internet", data: "15/08/2022", imagem:  "evento05", valorIngresso: "R$ 15,00")
     ]
     
-    
     func retornaListaDeEventos () -> [Evento] {
         
         return listaDeEventos
     }
-    
-    
-    
-    
-    
 }

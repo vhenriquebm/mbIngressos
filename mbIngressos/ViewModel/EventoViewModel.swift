@@ -8,28 +8,26 @@
 import Foundation
 import FirebaseAuth
 
-protocol deslogarUsuarioDelegate {
-    
-    func logOutDoUsuario ()
-
-    
-}
 
 protocol ConsultarStatusDoUsuarioDelegate {
-    
     func consultarStatusLoginDoUsuario ()
-
 }
 
 class EventoViewModel {
     
     var delegate: ConsultarStatusDoUsuarioDelegate?
     
+    var homeDelegate:HomeViewControllerDelegate?
+    
+    
     func logOutDoUsuario() {
         
         do {
            try  authentication.signOut()
             print ("usuario deslogado")
+            
+            homeDelegate?.direcionarUsuarioDeslogado()
+            
         }
         
         catch {
@@ -62,11 +60,11 @@ class EventoViewModel {
             
             if user != nil {
                 
-                print ( "Sucesso ao logar")
-                                
+               
+                
             } else {
                 
-                print ( "Erro ao logar")
+                self.homeDelegate?.direcionarUsuarioDeslogado()
             }
         }
     }
