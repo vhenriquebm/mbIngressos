@@ -9,7 +9,6 @@ import Foundation
 import FirebaseFirestore
 import FirebaseAuth
 
-
 class InfoViewModel {
     
     var eventoInformacoes:Evento?

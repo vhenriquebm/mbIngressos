@@ -20,8 +20,6 @@ let authentication = Auth.auth()
         
             if resultado == nil {
                 
-                print ("Erro ao logar")
-                
                 self.delegate?.exibeAlertaDelegate()
                 
                 return
@@ -29,8 +27,6 @@ let authentication = Auth.auth()
             
         }
     }
-    
-    
     
     func verificaStatusLogindoUsuario () {
         authentication.addStateDidChangeListener { autenticacao, usuario in

@@ -8,7 +8,7 @@
 import UIKit
 
 class ComprasTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var nomeDoEvento: UILabel!
     
     @IBOutlet weak var dataDoEvento: UILabel!

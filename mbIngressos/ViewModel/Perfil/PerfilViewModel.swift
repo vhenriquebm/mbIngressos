@@ -11,9 +11,7 @@ import FirebaseAuth
 
 
 protocol PerfilViewModelDelegate {
-    
     func showUserData (nome: String, email: String, cpf: String)
-    
 }
 
 class PerfilViewModel {
@@ -22,32 +20,21 @@ class PerfilViewModel {
     let authentication = Auth.auth()
     var delegate: PerfilViewModelDelegate?
     
-    func fetchUserData ()
- {
+    func fetchUserData () {
         
         guard let idDoUsuario = authentication.currentUser?.uid else {return}
 
         let usariosReferencia = fireStore.collection("usuarios").document(idDoUsuario)
-      
         
         usariosReferencia.getDocument { snapshot, erro in
             
             if let dados = snapshot?.data() {
-                
                 let nome = dados["nome"] as? String
                 let email = dados["email"] as? String
                 let cpf = dados["cpf"] as? String
-
                 
                 self.delegate?.showUserData(nome: nome ?? "", email: email ?? "", cpf: cpf ?? "")
-        
-                
             }
-            
         }
     }
-    
-    
-    
-    
 }

@@ -42,6 +42,7 @@ class EfetuarCompraViewController: UIViewController {
         let acao = UIAlertAction(title: "Ok", style: .default) { irParaTelaPrincipal in
             self.navigationController?.popViewController(animated: true)
         }
+        
         alerta.addAction(acao)
         present(alerta, animated: true)
     }

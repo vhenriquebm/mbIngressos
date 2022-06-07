@@ -146,14 +146,14 @@
 		42875E432849252F00B63305 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				42875E442849254500B63305 /* EventoViewModel.swift */,
-				428F4CCF284E40B4009CEDE2 /* InfoViewModel.swift */,
-				428F4CD1284E4D2A009CEDE2 /* EfetuarCompraViewModel.swift */,
-				42F3B2C1284E637800EF520A /* FavoritosViewModel.swift */,
-				42F3B2C3284E6F6E00EF520A /* LoginViewModel.swift */,
-				428DB657284E78F30050A190 /* CadastroViewModel.swift */,
-				428DB659284E79E70050A190 /* PerfilViewModel.swift */,
-				428DB65B284E85D10050A190 /* ComprasViewModel.swift */,
+				428DB66D284FCE940050A190 /* Info View */,
+				428DB66C284FCE830050A190 /* Efetuar Compra */,
+				428DB66B284FCE7C0050A190 /* Login */,
+				428DB66A284FCE740050A190 /* Compras */,
+				428DB669284FCE650050A190 /* Favoritos */,
+				428DB668284FCE5F0050A190 /* Perfil */,
+				428DB667284FCE590050A190 /* Cadastro */,
+				428DB666284FCE500050A190 /* Home */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -239,6 +239,70 @@
 				42C4A19B284A98F300A031B9 /* EfetuarCompraViewController.swift */,
 			);
 			path = "Efetuar Compra";
+			sourceTree = "<group>";
+		};
+		428DB666284FCE500050A190 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				42875E442849254500B63305 /* EventoViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		428DB667284FCE590050A190 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				428DB657284E78F30050A190 /* CadastroViewModel.swift */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		428DB668284FCE5F0050A190 /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				428DB659284E79E70050A190 /* PerfilViewModel.swift */,
+			);
+			path = Perfil;
+			sourceTree = "<group>";
+		};
+		428DB669284FCE650050A190 /* Favoritos */ = {
+			isa = PBXGroup;
+			children = (
+				42F3B2C1284E637800EF520A /* FavoritosViewModel.swift */,
+			);
+			path = Favoritos;
+			sourceTree = "<group>";
+		};
+		428DB66A284FCE740050A190 /* Compras */ = {
+			isa = PBXGroup;
+			children = (
+				428DB65B284E85D10050A190 /* ComprasViewModel.swift */,
+			);
+			path = Compras;
+			sourceTree = "<group>";
+		};
+		428DB66B284FCE7C0050A190 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				42F3B2C3284E6F6E00EF520A /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		428DB66C284FCE830050A190 /* Efetuar Compra */ = {
+			isa = PBXGroup;
+			children = (
+				428F4CD1284E4D2A009CEDE2 /* EfetuarCompraViewModel.swift */,
+			);
+			path = "Efetuar Compra";
+			sourceTree = "<group>";
+		};
+		428DB66D284FCE940050A190 /* Info View */ = {
+			isa = PBXGroup;
+			children = (
+				428F4CCF284E40B4009CEDE2 /* InfoViewModel.swift */,
+			);
+			path = "Info View";
 			sourceTree = "<group>";
 		};
 		CEB565D0463E4E206B696324 /* Pods */ = {

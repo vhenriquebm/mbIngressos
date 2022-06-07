@@ -12,7 +12,7 @@ import UIKit
 class ComprasViewController: UIViewController{
     
     private let comprasViewModel = ComprasViewModel()
-
+    
     @IBOutlet weak var tabelaDeCompras: UITableView!
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ComprasViewController: UIViewController{
         comprasViewModel.recuperarCompras {
             self.tabelaDeCompras.reloadData()
         }
-
+        
     }
 }
 

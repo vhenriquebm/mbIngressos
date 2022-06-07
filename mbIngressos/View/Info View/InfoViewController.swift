@@ -12,7 +12,7 @@ import UIKit
 class InfoViewController: UIViewController {
     
     let infoViewModel = InfoViewModel ()
-
+    
     @IBOutlet weak var imagemDoEvento: UIImageView!
     
     @IBOutlet weak var nomeDoEvento: UILabel!
@@ -20,7 +20,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var dataDoEvento: UILabel!
     
     @IBOutlet weak var descricaoDoEvento: UILabel!
-        
+    
     @IBAction func adicionarAosFavoritos(_ sender: Any) {
         
         infoViewModel.salvarDadosDoEventoEmFavoritos()
@@ -37,7 +37,7 @@ class InfoViewController: UIViewController {
         
         configureUI()
         
-            }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -46,7 +46,7 @@ class InfoViewController: UIViewController {
             let favorito1 = FavoritosViewModel(novoEventoFavorito: infoViewModel.eventoInformacoes)
             
             favoritosViewController.favoritoViewModel = favorito1
-
+            
             
         }
         

@@ -10,12 +10,12 @@ import UIKit
 class FavoritosViewController: UIViewController {
     
     var favoritoViewModel = FavoritosViewModel(novoEventoFavorito: nil)
-
+    
     @IBOutlet weak var tabelaDeFavoritos: UITableView!
     
     override func viewDidLoad() {
         configureFavoriteTable()
-       
+        
         
     }
     
@@ -35,7 +35,7 @@ extension FavoritosViewController: UITableViewDelegate {
 extension FavoritosViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoritoViewModel.favoritos.count ?? 0
+        return favoritoViewModel.favoritos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -15,22 +15,16 @@ class HomeViewController: UIViewController {
     
     let eventoViewModel = EventoViewModel ()
     
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         eventoViewModel.delegate = self
-        
     }
     
     
-    @IBAction func botaoDeSair(_ sender: Any)
-    {
-        
+    @IBAction func botaoDeSair(_ sender: Any){
         eventoViewModel.logOutDoUsuario()
-        print ("botao sair ta funcionando")
     }
-    
     
     func configureUI () {
         title = "Home"
@@ -39,8 +33,6 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         tabBarController?.tabBar.isHidden = false
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
-        
     }
 }
 
@@ -68,7 +60,6 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         eventoViewModel.retornarEventos().count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,10 +87,7 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: EventoViewModelDelegate {
- 
-
     func direcionarParaLogin() {
-        
         navigationController?.popViewController(animated: true)
     }
     

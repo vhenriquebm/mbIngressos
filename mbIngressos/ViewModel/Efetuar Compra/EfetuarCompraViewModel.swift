@@ -15,7 +15,7 @@ class EfetuarCompraViewModel {
     let fireStore = Firestore.firestore()
     
     private let informacoesParaCompra:Evento?
-
+    
     init(informacoesParaCompra: Evento?){
         
         self.informacoesParaCompra = informacoesParaCompra
@@ -53,9 +53,4 @@ class EfetuarCompraViewModel {
         }
         
     }
-    
-    
-    
-    
-    
 }

@@ -8,7 +8,6 @@
 import UIKit
 
 protocol LoginViewControllerDelegate {
-
     func exibeAlertaDelegate ()
     func direcionarParaHome()
 }
@@ -32,7 +31,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         loginViewModel.delegate = self
-      configureUI()
+        configureUI()
         
         loginViewModel.verificaStatusLogindoUsuario()
         
@@ -48,7 +47,6 @@ class LoginViewController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
     
-    
 }
 
 extension LoginViewController: LoginViewControllerDelegate {
@@ -58,11 +56,11 @@ extension LoginViewController: LoginViewControllerDelegate {
         performSegue(withIdentifier: "home", sender: self)
     }
     
-    
     func exibeAlertaDelegate() {
         
         exibeAlerta(title: "Usuário ou senha incorretos", message: "Por gentileza confirmas as informações")
     }
+    
     
     func exibeAlerta (title:String?, message: String?) {
         

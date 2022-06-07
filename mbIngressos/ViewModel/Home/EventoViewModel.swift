@@ -10,40 +10,32 @@ import FirebaseAuth
 
 
 protocol EventoViewModelDelegate {
-    
     func direcionarParaLogin ()
 }
 
 class EventoViewModel {
-
-    var delegate: EventoViewModelDelegate?
     
+    var delegate: EventoViewModelDelegate?
     
     func logOutDoUsuario() {
         
         do {
-           try  authentication.signOut()
+            try  authentication.signOut()
             delegate?.direcionarParaLogin()
         }
+        
         catch {
+            print (error.localizedDescription)
         }
-
-}
-    
+    }
     
     let authentication = Auth.auth()
     var evento: Evento?
     let servico = Service ()
     
-    
     func retornarEventos () -> [Evento] {
-        
         return servico.retornaListaDeEventos()
     }
-    
-    
-    
-  
 }
 
 
