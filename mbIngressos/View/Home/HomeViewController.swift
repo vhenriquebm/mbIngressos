@@ -8,44 +8,27 @@
 import UIKit
 import FirebaseAuth
 
-protocol HomeViewControllerDelegate {
-    func direcionarUsuarioDeslogado()
-}
-
 class HomeViewController: UIViewController {
     let authentication = Auth.auth()
-
+    
     @IBOutlet weak var tabelaDeEventos: UITableView!
     
     let eventoViewModel = EventoViewModel ()
     
-    @IBAction func entrarButton(_ sender: Any) {
-        
-        performSegue(withIdentifier: "telaDeLogin", sender: self)
-    }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventoViewModel.consultarStatusLoginDoUsuario()
+        configureUI()
+        eventoViewModel.delegate = self
         
-        eventoViewModel.homeDelegate = self
-        
-        do {
-           try  authentication.signOut()
-            print ("usuario deslogado")
-            
-          
-            
-        }
-        
-        catch {
-            
-        }
     }
     
     
-    @IBAction func botaoDeSair(_ sender: Any) {
+    @IBAction func botaoDeSair(_ sender: Any)
+    {
+        
         eventoViewModel.logOutDoUsuario()
+        print ("botao sair ta funcionando")
     }
     
     
@@ -53,6 +36,11 @@ class HomeViewController: UIViewController {
         title = "Home"
         tabelaDeEventos.delegate = self
         tabelaDeEventos.dataSource = self
+        navigationController?.navigationBar.isHidden = false
+        tabBarController?.tabBar.isHidden = false
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
+        
     }
 }
 
@@ -107,13 +95,13 @@ extension HomeViewController: UITableViewDataSource {
     
 }
 
+extension HomeViewController: EventoViewModelDelegate {
+ 
 
-extension HomeViewController: HomeViewControllerDelegate {
-    
-    func direcionarUsuarioDeslogado() {
-        performSegue(withIdentifier: "telaDeLogin", sender: self)
+    func direcionarParaLogin() {
+        
+        navigationController?.popViewController(animated: true)
     }
-    
     
     
     

@@ -10,11 +10,16 @@ import FirebaseAuth
 import FirebaseFirestore
 
 
+protocol CadastroViewModelDelegate {
+    
+    func irParaHome()
+}
+
 class CadastroViewModel {
     
     let authentication = Auth.auth()
     let fireStore = Firestore.firestore()
-    
+    var delegate:CadastroViewModelDelegate?
     
     func registerNewUser (email: String?, senha: String?, nome: String?, cpf: String?) {
         
@@ -26,6 +31,9 @@ class CadastroViewModel {
            if erro == nil {
                print ("Sucesso ao cadastrar o usuário")
                
+               
+               self.delegate?.irParaHome()
+                            
                if let idUsuario = resultado?.user.uid {
                    
                    

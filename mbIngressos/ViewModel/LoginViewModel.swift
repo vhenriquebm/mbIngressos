@@ -14,11 +14,6 @@ let authentication = Auth.auth()
     
     var delegate: LoginViewControllerDelegate?
 
-    
-  
-    
-    
-    
     func userAuthentication (email: String?, senha: String?) {
       
         authentication.signIn(withEmail: email ?? "", password: senha ?? "") { resultado, erro in
@@ -32,22 +27,18 @@ let authentication = Auth.auth()
                 return
             }
             
-            if erro == nil {
-                
-                self.delegate?.direcionarParaHome()
-                print("Sucesso ao logar")
-                
-            }
-            
-            
         }
-        
-        
     }
     
     
-
     
-    
-    
+    func verificaStatusLogindoUsuario () {
+        authentication.addStateDidChangeListener { autenticacao, usuario in
+            
+            if usuario != nil {
+                
+                self.delegate?.direcionarParaHome()
+            }
+        }
+    }
 }

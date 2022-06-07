@@ -8,6 +8,7 @@
 import UIKit
 
 protocol LoginViewControllerDelegate {
+
     func exibeAlertaDelegate ()
     func direcionarParaHome()
 }
@@ -31,15 +32,30 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         loginViewModel.delegate = self
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.navigationBar.isHidden = false
+      configureUI()
+        
+        loginViewModel.verificaStatusLogindoUsuario()
+        
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        configureUI()
+    }
+    
+    func configureUI () {
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
+    }
+    
+    
 }
 
 extension LoginViewController: LoginViewControllerDelegate {
     
     func direcionarParaHome() {
-        navigationController?.popViewController(animated: true)
+        
+        performSegue(withIdentifier: "home", sender: self)
     }
     
     

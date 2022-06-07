@@ -22,5 +22,26 @@ class CadastroViewController: UIViewController {
     @IBAction func cadastrarUsuario(_ sender: Any) {
         
         cadastroViewModel.registerNewUser(email: emailDoUsuario.text, senha: senhaDoUsuario.text, nome: nomeDoUsuario.text, cpf: cpfDoUsuario.text)
+        
     }
+    
+    
+    override func viewDidLoad() {
+        navigationController?.navigationBar.isHidden = false
+        cadastroViewModel.delegate = self
+        
+    }
+}
+
+
+extension CadastroViewController: CadastroViewModelDelegate {
+    
+    func irParaHome() {
+        
+        performSegue(withIdentifier: "irParaHome", sender: self)
+    }
+    
+    
+    
+    
 }

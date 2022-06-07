@@ -9,36 +9,25 @@ import Foundation
 import FirebaseAuth
 
 
-protocol ConsultarStatusDoUsuarioDelegate {
-    func consultarStatusLoginDoUsuario ()
+protocol EventoViewModelDelegate {
+    
+    func direcionarParaLogin ()
 }
 
 class EventoViewModel {
-    
-    var delegate: ConsultarStatusDoUsuarioDelegate?
-    
-    var homeDelegate:HomeViewControllerDelegate?
+
+    var delegate: EventoViewModelDelegate?
     
     
     func logOutDoUsuario() {
         
         do {
            try  authentication.signOut()
-            print ("usuario deslogado")
-            
-            homeDelegate?.direcionarUsuarioDeslogado()
-            
+            delegate?.direcionarParaLogin()
         }
-        
         catch {
-            
         }
 
-        
-  
-    
-    
-    
 }
     
     
@@ -54,20 +43,7 @@ class EventoViewModel {
     
     
     
-    func consultarStatusLoginDoUsuario () {
-        
-        authentication.addStateDidChangeListener { auth, user in
-            
-            if user != nil {
-                
-               
-                
-            } else {
-                
-                self.homeDelegate?.direcionarUsuarioDeslogado()
-            }
-        }
-    }
+  
 }
 
 
